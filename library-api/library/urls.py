@@ -20,6 +20,11 @@ from rest_framework.routers import DefaultRouter
 from books.views import BookViewSet
 from members.views import MemberViewSet
 from borrowings.views import BorrowRecordViewSet
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Welcome to Library API")
+
 
 router = DefaultRouter()
 router.register('books', BookViewSet)
@@ -27,6 +32,7 @@ router.register('members', MemberViewSet)
 router.register('borrowings', BorrowRecordViewSet)
 
 urlpatterns = [
+    path('', home),
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
 ]
