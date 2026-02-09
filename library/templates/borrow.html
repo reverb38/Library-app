@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Borrow Book</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+
+<h1>Borrow / Return</h1>
+
+<form id="borrow-form">
+  <select id="member-select" required>
+    <option value="">Select Member</option>
+  </select>
+
+  <select id="book-select" required>
+    <option value="">Select Book</option>
+  </select>
+
+  <button type="submit">Borrow Book</button>
+</form>
+
+<div id="borrowed-list"></div>
+
+<script src="{% static 'script.js' %}"></script>
+</body>
+</html>

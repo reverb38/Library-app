@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Members</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+
+<h1>Members</h1>
+
+<form id="member-form">
+  <input type="text" id="name" placeholder="Member Name" required>
+  <input type="email" id="email" placeholder="Email" required>
+  <button type="submit">Add Member</button>
+</form>
+
+<div id="members-list"></div>
+
+<script src="{% static 'script.js' %}"></script>
+</body>
+</html>
